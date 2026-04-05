@@ -2,12 +2,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
+
+dotenv.config();
+
 const uploadRoutes = require('./routes/upload');
 const analyticsRoutes = require('./routes/analytics');
 const invoiceRoutes = require('./routes/invoices');
 const path = require('path');
-
-dotenv.config();
 
 const app = express();
 app.use(cors());
